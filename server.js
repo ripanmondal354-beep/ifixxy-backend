@@ -1,8 +1,8 @@
 import express from "express";
 import OpenAI from "openai";
-
+import cors from "cors";
 const app = express();
-
+app.use(cors());
 app.use(express.json({ limit: "20kb" }));
 
 // Health check: confirm that the server is running
